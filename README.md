@@ -15,13 +15,16 @@
   - `src/components/apiSettings.tsx`: プロバイダー・APIキー・モデルを選択するUI
 - 使われていなかったWindow AI関連コード（`openAiChat.ts`, `pages/api/chat.ts`）を削除
 - `window.ai` パッケージ依存を削除
+- Geminiについて最新の情報を検索して回答できるよう Google検索グラウンディングのトグルが表示されるように設定
 
 ### 音声合成（TTS）
 - **Koeiro API（サービス終了済み）** → **VOICEVOX（ローカルエンジン）** に変更
   - `src/features/voicevox/voicevoxClient.ts`: VOICEVOXエンジンへの `audio_query` → `synthesis` 呼び出しクライアント
   - `src/components/ttsSettings.tsx`: TTSプロバイダー・話者を選択するUI
   - `src/features/messages/speakCharacter.ts`: TTSプロバイダーを切り替えられるよう拡張（Koeiro実装は後方互換として残置、現在は動作しません）
-
+### キャラクター設定
+- キャラクターを①仲良し・②秘書③自由設定（空白から自由に記述）から選択できるように設定
+  
 ## セットアップ
 
 ### 1. このアプリ
